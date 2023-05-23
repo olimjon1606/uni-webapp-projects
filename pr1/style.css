@@ -4,9 +4,11 @@ body{
     box-sizing: border-box;
     height: 100vh;
     background: linear-gradient(lightgreen,lightblue,orange);
-    text-align: center;
-    align-items: center;
     color: green;
+}
+.container{
+    width: 90%;
+    margin: auto;
 }
 h1{
     font-size: 50px;
@@ -16,5 +18,10 @@ h1{
     font-size: 20px;
     width: 300px;
     padding: 5px 10px;
-    margin: 10px;
+    margin: 10px 0;
+    /* display: block; */
+}
+.select select{
+    padding: 5px 10px;
+    font-size: 20px;
 }
