@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save Input Data</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <input type="text" id="inputData" placeholder="Enter data">
+  <button id="saveButton">Save</button>
+
+  <script>
+    document.getElementById('saveButton').addEventListener('click', function() {
+      var inputData = document.getElementById('inputData').value;
+      var blob = new Blob([inputData], { type: 'text/plain' });
+      var anchor = document.createElement('a');
+      anchor.href = window.URL.createObjectURL(blob);
+      anchor.download = 'output.txt';
+      anchor.click();
+    });
+  </script>
+</body>
+</html>

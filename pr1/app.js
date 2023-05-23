@@ -6,9 +6,12 @@ const calcBtn = document.querySelector('.calc');
 const fillBtn = document.querySelector('.fill');
 const color1 = document.querySelector('.color1');
 const color2 = document.querySelector('.color2');
+const file = document.querySelector('.file');
+const saveBtn = document.querySelector('.save');
 
 calcBtn.addEventListener('click', calculate)
 fillBtn.addEventListener('click', fill)
+saveBtn.addEventListener('click', save)
 function calculate() {
     let array = argInput.value.split(' ');
     array = Array.from(array, Number);
@@ -64,3 +67,28 @@ function backgColor() {
     input.forEach(f = x => x.style.background = color2.value)
 }
 
+const n = "olimjon"
+console.log(n.slice(-3))
+
+const inputData = 'Hello, world!';
+
+function save() {
+    var inputData = `[${argInput.value}] : ${filterOption.value} => ${result.value}`
+    var blob = new Blob([inputData], { type: 'text/plain' });
+    var anchor = document.createElement('a');
+    anchor.href = window.URL.createObjectURL(blob);
+    if (file.value === '' || file.value === ' ') {
+        anchor.download = 'output.txt';
+        anchor.click();
+    } else if (file.value.slice(-4) !== '.txt') {
+        anchor.download = file.value + '.txt';
+        anchor.click();
+    }else{
+        anchor.download = file.value;
+        anchor.click();
+
+    }
+
+}
+
+console.log(file.value)

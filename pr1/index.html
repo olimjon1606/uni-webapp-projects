@@ -16,6 +16,7 @@
         <h1>Unusual Calculator</h1>
         <input type="text" class="input arg1_array" placeholder="arg">
         <input type="text" class="input result" placeholder="result" readonly>
+        <input type="text" class="input file" placeholder="file_name.txt">
         <div class="select">
             <select name="calculator" class="filter-calc">
                 <option value="sum">∑</option>
@@ -26,12 +27,14 @@
             </select>
             <button class="btn calc">Calc</button>
             <button class="btn fill">Fill</button>
+            <button class="btn save">Save</button>
         </div>
         <hr>
 
         <input type="color" class="color1" name="color1" onchange="fontColor()" value="#0000">
         <input type="color" class="color2" name="color2" onchange="backgColor()" value="#ffffff">
     </div>
+    <img src="./calc.png" alt="image_here" class="img">
 
     <script src="./app.js"></script>
 </body>

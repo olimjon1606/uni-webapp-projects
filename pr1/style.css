@@ -5,6 +5,13 @@ body{
     height: 100vh;
     background: linear-gradient(lightgreen,lightblue,orange);
     color: green;
+    position: relative;
+}
+.img{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform: rotate(180deg);
 }
 .container{
     width: 90%;
@@ -19,8 +26,6 @@ h1{
     width: 300px;
     padding: 5px 10px;
     margin: 10px 0;
-    color: red;
-    /* display: block; */
 }
 .select select{
     padding: 5px 10px;
@@ -34,4 +39,9 @@ h1{
 hr{
     margin: 40px auto;
     border: 2px solid white;
+}
+.color1 , .color2{
+    width: 80px;
+    height: 40px;
+    margin-left: 10px;
 }
