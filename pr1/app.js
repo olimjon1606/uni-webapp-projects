@@ -1,14 +1,16 @@
 const argInput = document.querySelector('.arg1_array');
+const input = document.querySelectorAll('.input');
 const result = document.querySelector('.result');
-// const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector('.filter-calc');
 const calcBtn = document.querySelector('.calc');
 const fillBtn = document.querySelector('.fill');
+const color1 = document.querySelector('.color1');
+const color2 = document.querySelector('.color2');
 
 calcBtn.addEventListener('click', calculate)
 fillBtn.addEventListener('click', fill)
 function calculate() {
-    let array = argInput.value.split(' ').join('');
+    let array = argInput.value.split(' ');
     array = Array.from(array, Number);
 
     switch (filterOption.value) {
@@ -17,7 +19,6 @@ function calculate() {
             break;
         case "product":
             result.value = product(array);
-            console.log(array);
             break;
         case "maximum":
             result.value = max(array)
@@ -29,14 +30,16 @@ function calculate() {
 
 }
 
-function random(){
-    return Math.floor(Math.random()*10)
+function random() {
+    return Math.floor(Math.random() * 10)
 }
-function fill(){
-    let n = new Array(10).fill(random())
-    console.log(n)
 
+function fill() {
+    let n = new Array(10).fill()
+    n = n.map(f = (i) => i = random())
+    argInput.value = n.join(' ')
 }
+
 function sum(array) {
     function f(total, num) {
         return total + num
@@ -52,4 +55,12 @@ function product(array) {
 }
 const max = array => array.sort(f = (a, b) => a - b)[array.length - 1]
 const min = array => array.sort(f = (b, a) => a - b)[array.length - 1]
+
+function fontColor() {
+    input.forEach(f = x => x.style.color = color1.value)
+}
+
+function backgColor() {
+    input.forEach(f = x => x.style.background = color2.value)
+}
 
