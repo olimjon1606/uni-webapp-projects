@@ -71,7 +71,6 @@ const n = "olimjon"
 console.log(n.slice(-3))
 
 const inputData = 'Hello, world!';
-
 function save() {
     var inputData = `[${argInput.value}] : ${filterOption.value} => ${result.value}`
     var blob = new Blob([inputData], { type: 'text/plain' });
