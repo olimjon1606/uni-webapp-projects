@@ -86,6 +86,5 @@ function save() {
     }else{
         anchor.download = file.value;
         anchor.click();
-
     }
 }
