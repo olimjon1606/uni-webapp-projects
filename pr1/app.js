@@ -66,7 +66,6 @@ function fontColor() {
 function backgColor() {
     input.forEach(f = x => x.style.background = color2.value)
 }
-
 const n = "olimjon"
 console.log(n.slice(-3))
 
