@@ -90,5 +90,3 @@ function save() {
     }
 
 }
-
-console.log(file.value)
