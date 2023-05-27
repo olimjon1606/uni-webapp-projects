@@ -14,12 +14,6 @@ fillBtn.addEventListener('click', fill)
 saveBtn.addEventListener('click', save)
 
 
-function product(array) {
-    function f(total, num) {
-        return total * num
-    }
-    return array.reduce(f, 1)
-}
 const max = array => array.sort(f = (a, b) => a - b)[array.length - 1]
 const min = array => array.sort(f = (b, a) => a - b)[array.length - 1]
 
