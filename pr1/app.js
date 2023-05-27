@@ -35,7 +35,6 @@ function calculate() {
 function random() {
     return Math.floor(Math.random() * 10)
 }
-
 function fill() {
     let n = new Array(10).fill()
     n = n.map(f = (i) => i = random())
