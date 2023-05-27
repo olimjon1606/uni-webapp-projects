@@ -12,40 +12,7 @@ const saveBtn = document.querySelector('.save');
 calcBtn.addEventListener('click', calculate)
 fillBtn.addEventListener('click', fill)
 saveBtn.addEventListener('click', save)
-function calculate() {
-    let array = argInput.value.split(' ');
-    array = Array.from(array, Number);
 
-    switch (filterOption.value) {
-        case "sum":
-            result.value = sum(array);
-            break;
-        case "product":
-            result.value = product(array);
-            break;
-        case "maximum":
-            result.value = max(array)
-            break;
-        case "minimum":
-            result.value = min(array)
-            break;
-    }
-
-}
-function random() {
-    return Math.floor(Math.random() * 10)
-}
-function fill() {
-    let n = new Array(10).fill()
-    n = n.map(f = (i) => i = random())
-    argInput.value = n.join(' ')
-}
-function sum(array) {
-    function f(total, num) {
-        return total + num
-    }
-    return array.reduce(f, 0)
-}
 
 function product(array) {
     function f(total, num) {
