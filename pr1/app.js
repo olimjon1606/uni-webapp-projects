@@ -46,7 +46,6 @@ function sum(array) {
     }
     return array.reduce(f, 0)
 }
-
 function product(array) {
     function f(total, num) {
         return total * num
