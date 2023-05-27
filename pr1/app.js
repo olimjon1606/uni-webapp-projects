@@ -7,8 +7,6 @@ const fillBtn = document.querySelector('.fill');
 const color1 = document.querySelector('.color1');
 const color2 = document.querySelector('.color2');
 const file = document.querySelector('.file');
-const file = document.querySelector('.file');
-const file = document.querySelector('.file');
 const saveBtn = document.querySelector('.save');
 
 calcBtn.addEventListener('click', calculate)
