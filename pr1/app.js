@@ -7,6 +7,8 @@ const fillBtn = document.querySelector('.fill');
 const color1 = document.querySelector('.color1');
 const color2 = document.querySelector('.color2');
 const file = document.querySelector('.file');
+const file = document.querySelector('.file');
+const file = document.querySelector('.file');
 const saveBtn = document.querySelector('.save');
 
 calcBtn.addEventListener('click', calculate)
@@ -58,7 +60,6 @@ const min = array => array.sort(f = (b, a) => a - b)[array.length - 1]
 function fontColor() {
     input.forEach(f = x => x.style.color = color1.value)
 }
-
 function backgColor() {
     input.forEach(f = x => x.style.background = color2.value)
 }
