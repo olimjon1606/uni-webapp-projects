@@ -40,7 +40,6 @@ function fill() {
     n = n.map(f = (i) => i = random())
     argInput.value = n.join(' ')
 }
-
 function sum(array) {
     function f(total, num) {
         return total + num
